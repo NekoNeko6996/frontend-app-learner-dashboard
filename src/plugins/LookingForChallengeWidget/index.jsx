@@ -20,7 +20,7 @@ export const LookingForChallengeWidget = () => {
   const hyperlinkDestination = baseAppUrl(courseSearchUrl) || '';
 
   return (
-    <Card orientation="horizontal" id="looking-for-challenge-widget">
+    <Card orientation="horizontal" id="looking-for-challenge-widget" className="animation-gradien-background">
       {/* <Card.ImageCap
         src={moreCoursesSVG}
         srcAlt="course side widget"

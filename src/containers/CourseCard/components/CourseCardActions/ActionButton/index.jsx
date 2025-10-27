@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '@openedx/paragon';
 
+import './index.scss';
+
 import useIsCollapsed from './hooks';
 
 export const ActionButton = (props) => {
@@ -9,6 +11,7 @@ export const ActionButton = (props) => {
     <Button
       {...props}
       {...isSmall && { size: 'sm' }}
+      className='btn-submit'
     />
   );
 };

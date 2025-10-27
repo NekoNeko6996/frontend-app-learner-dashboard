@@ -9,6 +9,7 @@ import { reduxHooks } from 'hooks';
 import verifiedRibbon from 'assets/verified-ribbon.png';
 import useActionDisabledState from './hooks';
 
+
 import messages from '../messages';
 
 const { courseImageClicked } = track.course;
@@ -24,8 +25,6 @@ export const CourseCardImage = ({ cardId, orientation }) => {
   const image = (
     <>
       <img
-        // w-100 is necessary for images on Safari, otherwise stretches full height of the image
-        // https://stackoverflow.com/a/44250830
         className="pgn__card-image-cap w-100 show"
         src={bannerImgSrc}
         alt={formatMessage(messages.bannerAlt)}
@@ -36,7 +35,7 @@ export const CourseCardImage = ({ cardId, orientation }) => {
             className="course-card-verify-ribbon-container"
             title={formatMessage(messages.verifiedHoverDescription)}
           >
-            <Badge as="div" variant="success" className="w-100">
+            <Badge as="div" variant="success" className="w-100 animation-gradien-background">
               {formatMessage(messages.verifiedBanner)}
             </Badge>
             <img src={verifiedRibbon} alt={formatMessage(messages.verifiedBannerRibbonAlt)} />
@@ -53,6 +52,7 @@ export const CourseCardImage = ({ cardId, orientation }) => {
         href={homeUrl}
         onClick={handleImageClicked}
         tabIndex="-1"
+        style={{ padding: "10px" }}
       >
         {image}
       </a>

@@ -15,6 +15,8 @@ import {
   useOptionVisibility,
 } from './hooks';
 
+import './index.scss'
+
 import messages from './messages';
 
 export const testIds = {
@@ -45,6 +47,7 @@ export const CourseCardMenu = ({ cardId }) => {
           iconAs={Icon}
           variant="primary"
           alt={formatMessage(messages.dropdownAlt)}
+          className="course-card-menu-dropdown-toggle"
         />
         <Dropdown.Menu>
           {shouldShowUnenrollItem && (

@@ -30,6 +30,7 @@ export const NoCoursesView = () => {
         as="a"
         href={baseAppUrl(courseSearchUrl)}
         iconBefore={Search}
+        className="no-courses-explore-button"
       >
         {formatMessage(messages.exploreCoursesButton)}
       </Button>

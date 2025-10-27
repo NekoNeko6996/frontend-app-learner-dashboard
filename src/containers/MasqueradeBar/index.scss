@@ -1,42 +1,120 @@
+// ------------------------------
+// MasqueradeBar.scss
+// Mobile-first responsive styles
+// ------------------------------
+
+$gap-xs: 0.5rem;
+$gap-sm: 0.75rem;
+$gap-md: 1rem;
+$gap-lg: 1.25rem;
+
+// Breakpoints (tương thích Bootstrap/Paragon)
+$bp-sm: 576px;   // small
+$bp-md: 768px;   // medium
+$bp-lg: 992px;   // large
+$bp-xl: 1200px;  // xlarge
+
 .masquerade-bar {
   display: flex;
-  align-items: flex-start;
-  padding: var(--pgn-spacing-spacer-3);
-  margin-bottom: var(--pgn-spacing-spacer-2);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $gap-sm;
+  padding: $gap-sm 0;
+  margin: 10px;
 
+  .masquerade-form-input {
+    margin-bottom: 0 !important;
+  }
+
+  // Trạng thái xem như ai đó (isMasquerading) vẫn dùng layout linh hoạt
+  .masquerade-chip {
+    align-self: center;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // Label (icon + text)
   .masquerade-form-label {
-    padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-3);
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin-bottom: 0;
-    white-space: nowrap;
+    gap: $gap-xs;
+    margin: 0;
 
-    &>.pgn__icon {
-      margin-right: var(--pgn-spacing-spacer-3);
+    // Ở màn rất nhỏ, thu gọn chữ, giữ icon
+    .masquerade-form-label-text {
+      display: none;
     }
   }
 
+  // Ô nhập
   .masquerade-form-input {
-    margin-bottom: 0;
-    flex-grow: 1;
-    max-width: var(--pgn-size-breakpoint-md);
+    flex: 1 1 100%;
+    min-width: 0; // tránh tràn
+
+    // đảm bảo FormControl full width khi stack
+    .pgn__form-control,
+    input,
+    .form-control {
+      width: 100%;
+    }
   }
 
-  .masquerade-chip {
-    padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-3);
-    font-size: var(--pgn-typography-font-size-base);
-  }
-
+  // Nút submit
   .masquerade-bar-button {
+    width: 100%;
     background: linear-gradient(135deg, #ec4899, #a855f7); 
     color: white;
     border: none;
   }
 }
 
-@media (--pgn-size-breakpoint-max-width-md) {
+// >= SM: giãn spacing, vẫn để input + nút chiếm nguyên hàng nếu thiếu chỗ
+@media (min-width: $bp-sm) {
   .masquerade-bar {
-    margin: auto;
-    padding: var(--pgn-spacing-spacer-3) var(--pgn-spacing-spacer-4);
+    gap: $gap-md;
+
+    .masquerade-form-label {
+      .masquerade-form-label-text {
+        display: inline; // hiện lại chữ từ SM trở lên
+      }
+    }
+
+    .masquerade-form-input {
+      flex-basis: 100%;
+    }
+
+    .masquerade-bar-button {
+      width: 100%;
+    }
+  }
+}
+
+// >= MD: layout ngang: [Label] [Input grow] [Button]
+@media (min-width: $bp-md) {
+  .masquerade-bar {
+    align-items: center;
+
+    .masquerade-form-input {
+      flex: 1 1 auto; // input co giãn
+      max-width: 560px; // giới hạn đọc tốt
+    }
+
+    .masquerade-bar-button {
+      width: auto; // trở lại auto-width
+      align-self: center;
+      white-space: nowrap;
+    }
+  }
+}
+
+// >= LG: nới khoảng cách, căn giữa chiều cao đẹp hơn
+@media (min-width: $bp-lg) {
+  .masquerade-bar {
+    gap: $gap-lg;
+
+    .masquerade-form-input {
+      max-width: 640px;
+    }
   }
 }
