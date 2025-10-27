@@ -1,0 +1,25 @@
+#looking-for-challenge-widget {
+  height: 150px;
+  padding: 20px;
+  background: linear-gradient(135deg, #06b6d4, #10B981); 
+  * {
+    color: white;
+  }
+
+  .pgn__card-wrapper-image-cap {
+    overflow: visible;
+    min-width: auto;
+  }
+}
+
+.watermark {
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+  height: auto;
+  position: absolute;
+
+  svg {
+    right: 0;
+  }
+}

@@ -1,0 +1,28 @@
+import React from 'react';
+import { useIntl } from '@edx/frontend-platform/i18n';
+import track from 'tracking';
+import { StrictDict } from 'utils';
+import { linkNames } from 'tracking/constants';
+
+import getLearnerHeaderMenu from './LearnerDashboardMenu';
+
+export const state = StrictDict({
+  isOpen: (val) => React.useState(val), // eslint-disable-line
+});
+
+export const findCoursesNavClicked = (href) => track.findCourses.findCoursesClicked(href, {
+  linkName: linkNames.learnerHomeNavExplore,
+});
+
+export const useLearnerDashboardHeaderMenu = ({
+  courseSearchUrl, authenticatedUser, exploreCoursesClick,
+}) => {
+  const { formatMessage } = useIntl();
+  console.log('courseSearchUrl in hook:', getLearnerHeaderMenu(formatMessage, courseSearchUrl, authenticatedUser, exploreCoursesClick));
+  return getLearnerHeaderMenu(formatMessage, courseSearchUrl, authenticatedUser, exploreCoursesClick);
+};
+
+export default {
+  findCoursesNavClicked,
+  useLearnerDashboardHeaderMenu,
+};
