@@ -3,33 +3,33 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   ViewAs: {
     id: 'MasqueradeBar.ViewAs',
-    defaultMessage: 'View as: ',
-    description: 'Label for the View as',
+    defaultMessage: 'Xem với tư cách: ',
+    description: 'Nhãn cho Xem với tư cách',
   },
   ViewingAs: {
     id: 'MasqueradeBar.ViewingAs',
-    defaultMessage: 'Viewing as: ',
-    description: 'Label for the Viewing as',
+    defaultMessage: 'Đang xem với tư cách: ',
+    description: 'Nhãn cho Đang xem với tư cách',
   },
   SubmitButton: {
     id: 'MasqueradeBar.SubmitButton',
-    defaultMessage: 'Submit',
-    description: 'Label for the Submit button',
+    defaultMessage: 'Gửi',
+    description: 'Nhãn cho nút Gửi',
   },
   StudentNameInput: {
     id: 'MasqueradeBar.StudentNameInput',
-    defaultMessage: 'Username or email',
-    description: 'Label for the Student Name or email input',
+    defaultMessage: 'Tên người dùng hoặc email',
+    description: 'Nhãn cho ô nhập Tên học viên hoặc email',
   },
   NoStudentFound: {
     id: 'MasqueradeBar.NoStudentFound',
-    defaultMessage: 'No student with this username or email could be found',
-    description: 'Error message when no student is found',
+    defaultMessage: 'Không tìm thấy học viên nào có tên người dùng hoặc email này',
+    description: 'Thông báo lỗi khi không tìm thấy học viên',
   },
   UnknownError: {
     id: 'MasqueradeBar.UnknownError',
-    defaultMessage: 'An unknown error occurred',
-    description: 'Error message when an unknown error occurs',
+    defaultMessage: 'Đã xảy ra lỗi không xác định',
+    description: 'Thông báo lỗi khi xảy ra lỗi không xác định',
   },
 });
 

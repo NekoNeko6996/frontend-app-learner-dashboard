@@ -4,13 +4,13 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   header: {
     id: 'learner-dash.relatedPrograms.header',
-    description: 'Header for related settings modal',
-    defaultMessage: 'Related Programs',
+    description: 'Tiêu đề cho modal các chương trình liên quan',
+    defaultMessage: 'Các chương trình liên quan',
   },
   description: {
     id: 'learner-dash.relatedPrograms.description',
-    description: 'Description for related settings modal',
-    defaultMessage: 'Are you looking to expand your knowledge?  Enrolling in a Program lets you take a series of courses in the subject that you\'re interested in',
+    description: 'Mô tả cho modal các chương trình liên quan',
+    defaultMessage: 'Bạn đang tìm cách mở rộng kiến thức của mình? \u00A0Đăng ký một Chương trình cho phép bạn tham gia một loạt các khóa học về chủ đề mà bạn quan tâm',
   },
 });
 

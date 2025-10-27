@@ -4,33 +4,33 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   header: {
     id: 'learner-dash.emailSettings.header',
-    description: 'Header for email settings modal',
-    defaultMessage: 'Receive course emails?',
+    description: 'Tiêu đề cho modal cài đặt email',
+    defaultMessage: 'Nhận email khóa học?',
   },
   emailsOff: {
     id: 'learner-dash.emailSettings.emailsOff',
-    description: 'Toggle text for email settings modal when email is disabled',
-    defaultMessage: 'Course emails are off',
+    description: 'Văn bản chuyển đổi cho modal cài đặt email khi email bị tắt',
+    defaultMessage: 'Email khóa học đang tắt',
   },
   emailsOn: {
     id: 'learner-dash.emailSettings.emailsOn',
-    description: 'Toggle text for email settings modal when email is enabled',
-    defaultMessage: 'Course emails are on',
+    description: 'Văn bản chuyển đổi cho modal cài đặt email khi email được bật',
+    defaultMessage: 'Email khóa học đang bật',
   },
   description: {
     id: 'learner-dash.emailSettings.description',
-    description: 'Description for email settings modal',
-    defaultMessage: 'Course emails include important information about your course from instructors.',
+    description: 'Mô tả cho modal cài đặt email',
+    defaultMessage: 'Email khóa học bao gồm thông tin quan trọng về khóa học của bạn từ giảng viên.',
   },
   nevermind: {
     id: 'learner-dash.emailSettings.nevermind',
-    description: 'Cancel action for email settings modal',
-    defaultMessage: 'Never mind',
+    description: 'Hành động hủy cho modal cài đặt email',
+    defaultMessage: 'Để sau',
   },
   save: {
     id: 'learner-dash.emailSettings.save',
-    description: 'Save action for email settings modal',
-    defaultMessage: 'Save settings',
+    description: 'Hành động lưu cho modal cài đặt email',
+    defaultMessage: 'Lưu cài đặt',
   },
 
 });
